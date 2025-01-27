@@ -5,8 +5,8 @@ header .nav-wrapper {
   z-index: 2;
   position: fixed;
   margin-top: 0;
-  padding-bottom: 20px;
-  padding-top: 20px;
+  /* padding-bottom: 20px; */
+  /* padding-top: 20px; */
   transition: padding-bottom 0s ease, padding-top 0s;
 }
 
@@ -20,8 +20,8 @@ header .nav-wrapper.scaleout-header {
 header .top-nav-wrapper {
   width: 100%;
   background-color: black;
-  color: white;
-  padding: 6px;
+  /* color: white; */
+  /* padding: 6px; */
 }
 
 header .top-nav-wrapper div {
@@ -57,20 +57,6 @@ header nav {
   height: var(--nav-height);
   padding: 0 24px;
   font-family: var(--body-font-family);
-}
-
-header .sign-in {
-  position: absolute;
-  top: 0;
-  right: 0;
-  background-color: black;
-  width: 100%;
-  height: 20px;
-  color: white;
-  text-align: end;
-  padding: 2px;
-  padding-right: 10px;
-
 }
 
 header nav[aria-expanded='true'] {
@@ -170,11 +156,6 @@ header nav[aria-expanded='true'] .top-nav-bar-links .default-content-wrapper .bu
   font-size: 55px;
   margin: 0;
   padding: 0;
-  font-size: 15px;
-  position: absolute;
-  top: -8px;
-  right: 5px;
-  background-color: black;
 }
 
 header nav[aria-expanded='true'] .nav-hamburger-icon {
@@ -364,10 +345,6 @@ header nav .nav-sections ul>li>ul>li {
     align-items: center;
     justify-content: space-between;
     width: 17%;
-  }
-
-  header search-input {
-    border: 1px solid black;
   }
 
   header nav .top-nav-bar-form .default-content-wrapper p {
