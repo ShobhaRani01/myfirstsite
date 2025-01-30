@@ -28,9 +28,9 @@ async function fetchJsonData(jsonURL) {
 function createCardsContainer(data) {
     const container = document.createElement('div');
     container.classList.add('dynamic-cards-container');
-    // Batch create cards;
+
     const cardElements = data.map(createCard);
-    // Append all cards at once
+
     container.append(...cardElements);
     return container;
 }
@@ -45,7 +45,6 @@ export default async function decorate(block) {
     try {
         const jsonURL = queryIndexLink.href;
         const jsonData = await fetchJsonData(jsonURL);
-        // Pass data to container creation
         const cardsContainer = createCardsContainer(jsonData.data);
         parentDiv.append(cardsContainer);
         queryIndexLink.replaceWith(parentDiv);
