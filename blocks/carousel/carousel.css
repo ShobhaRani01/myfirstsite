@@ -145,13 +145,15 @@
     left: calc(50% - 2px);
 }
 
-@media (width >=300px) and (width< 600px) {
+@media (width >=300px) and (width< 900px) {
     .carousel .carousel-slide .carousel-slide-content {
-        top: -190px;
-        left: -160px;
+        left: 12px;
+        right: 52px;
+        display: none;
     }
 
     .carousel .carousel-navigation-buttons {
+        width: 88px;
         left: 12px;
         right: 52px;
     }
@@ -169,6 +171,7 @@
     .carousel .carousel-navigation-buttons {
         left: 24px;
         right: 24px;
+        width: 88px;
     }
 
     .carousel .carousel-slide .carousel-slide-content {

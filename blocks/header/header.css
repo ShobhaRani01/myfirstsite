@@ -370,3 +370,35 @@ header nav .nav-sections ul>li>ul>li {
 header nav .nav-tools {
   grid-area: tools;
 }
+
+.top-nav-bg {
+  background-color: black;
+  color: white;
+  font-size: 14px;
+  font-weight: bold;
+  width: 100%;
+}
+
+.nav-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+  column-gap: 2rem;
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  margin-right: 5rem;
+}
+
+.nav-list li {
+  cursor: pointer;
+}
+
+.nav-list a {
+  color: white;
+  text-decoration: none;
+}
+
+.nav-list a:hover {
+  text-decoration: underline;
+}
