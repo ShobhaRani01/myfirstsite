@@ -158,9 +158,58 @@ export default async function decorate(block) {
   // prevent mobile nav behavior on window resize
   toggleMenu(nav, navSections, isDesktop.matches);
   isDesktop.addEventListener('change', () => toggleMenu(nav, navSections, isDesktop.matches));
+  const topNavWrapper = document.createElement('div');
+  topNavWrapper.className = 'top-nav-wrapper';
+  block.append(topNavWrapper);
 
   const navWrapper = document.createElement('div');
   navWrapper.className = 'nav-wrapper';
   navWrapper.append(nav);
   block.append(navWrapper);
+
+  const headerBlock = document.querySelector('.header.block');
+  if (headerBlock) {
+    const topNavDiv = document.createElement('div');
+    topNavDiv.className = "top-nav top-nav-bg";
+
+    const navList = document.createElement('ul');
+    navList.className = "nav-list";
+
+    const loginItem = document.createElement('li');
+    loginItem.textContent = "LOGIN";
+
+    const signupItem = document.createElement('li');
+    const signupLink = document.createElement('a');
+    signupLink.textContent = 'SIGN UP';
+    signupLink.href = '/form';
+    signupItem.appendChild(signupLink);
+
+    navList.appendChild(loginItem);
+    navList.appendChild(signupItem);
+    topNavDiv.appendChild(navList);
+
+    headerBlock.prepend(topNavDiv);
+  }
+
+  const searchElem = document.querySelector('.form-wrapper #form');
+  searchElem.addEventListener('keypress', (event) => {
+    event.stopPropagation();
+    if (event.charCode === 13) {
+      let url = 'www.google.com';
+      if (!url.startsWith('http')) {
+        url = `https://${url}`;
+      }
+      window.open(url, '_blank');
+    }
+  });
 }
+
+// eslint-disable-next-line func-names
+window.onscroll = function () {
+  const header = document.querySelector('.nav-wrapper');
+  if (window.scrollY > 40) {
+    header?.classList?.add('scaleout-header');
+  } else {
+    header?.classList?.remove('scaleout-header');
+  }
+};
