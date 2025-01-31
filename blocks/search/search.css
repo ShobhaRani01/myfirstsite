@@ -4,38 +4,24 @@
     grid-template-columns: auto 1fr;
     gap: 1ch;
     align-items: center;
-    position: relative;
-}
-
-.search .search-box .icon-search {
-    position: absolute;
-    left: 5px;
 }
 
 .search .search-box input {
     box-sizing: border-box;
     display: block;
+    width: 100%;
     margin: 0;
-    font-size: var(--body-font-size-xs);
-    background-color: var(--text-color-hf);
-    /* border: 1px solid transparent; */
-    border-radius: 0;
-    color: var(--background-color-hf);
-    height: 42px;
-    width: calc(100% - 4rem);
-    padding-left: 2.1rem;
-    padding-right: 0.5rem;
-}
-
-.search .search-box input::placeholder {
-    text-transform: uppercase;
-    font-size: var(--body-font-size-xs);
-}
-
-.search .search-box input:focus {
-    border: 1px solid var(--text-color);
-    outline: 0;
+    padding: 0.5em;
+    border-radius: 4px;
+    border: 1px solid var(--dark-color);
     background-color: var(--background-color);
+    color: var(--text-color);
+    font-size: var(--body-font-size-s);
+    transition: border-color 0.2s;
+}
+
+.search .search-box input:hover {
+    border: 1px solid var(--text-color);
 }
 
 /* search results */
@@ -150,28 +136,36 @@
     border-radius: 50%;
 }
 
-@media (width <=767px) {
-    .search .search-box {
-        justify-content: flex-end;
-        display: inline-flex;
-    }
-
+@media (max-width: 900px) {
     .search .search-box input {
-        padding-left: 1.6rem;
-        padding-right: 0.1rem;
-    }
-
-    .search .search-box .icon-search {
-        position: absolute;
-        left: 68px;
-        width: 18px;
-        height: 18px;
-        top: 5px;
+        margin-right: 10px;
+        padding: 5px;
+        font-size: 12px;
     }
 }
 
-@media (width >=900px) {
-    .search .search-box input {
-        width: calc(100% - 2rem);
+.search-container.nav-tools .search-wrapper,
+.search-container.nav-tools .search.block {
+    height: 43px;
+    width: 200px;
+}
+
+
+.search-container.nav-tools .search-box {
+    display: flex;
+    position: relative;
+}
+
+.search-container.nav-tools .icon.icon-search {
+    position: absolute;
+    right: 12px;
+}
+
+@media (max-width: 900px) {
+
+    .search-container.nav-tools .search-wrapper,
+    .search-container.nav-tools .search.block {
+        height: 30px;
+        width: 140px;
     }
 }

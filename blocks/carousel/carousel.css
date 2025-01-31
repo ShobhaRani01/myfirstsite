@@ -90,6 +90,7 @@
     border-radius: 50%;
     background-color: #dadada;
     transition: background-color 0.2s;
+    display: none;
 }
 
 .carousel .carousel-slide-indicator button:disabled,
@@ -147,9 +148,9 @@
 
 @media (width >=300px) and (width< 900px) {
     .carousel .carousel-slide .carousel-slide-content {
-        left: 12px;
-        right: 52px;
-        display: none;
+        top: -190px;
+        left: -160px;
+        /* display: none; */
     }
 
     .carousel .carousel-navigation-buttons {

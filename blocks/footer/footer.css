@@ -5,7 +5,7 @@ footer {
 }
 
 footer .columns ul li a {
-  color: var(--text-color-hf);
+  color: white;
   font-size: var(--body-font-size-xs);
   font-weight: normal;
   text-transform: uppercase;
@@ -100,6 +100,14 @@ footer .section .default-content-wrapper p a {
     padding: 40px 32px 24px;
   }
 
+
+  @media (width>=300px) and (width<900px) {
+    footer a:any-link {
+      color: white;
+      text-decoration: none;
+    }
+  }
+
   footer .columns>div {
     align-items: center;
     flex-direction: unset;
@@ -113,6 +121,11 @@ footer .section .default-content-wrapper p a {
 
   footer .columns>div>div:nth-child(1) {
     flex: 0;
+  }
+
+  footer a:any-link {
+    color: white;
+    text-decoration: none;
   }
 
   footer .columns ul {
